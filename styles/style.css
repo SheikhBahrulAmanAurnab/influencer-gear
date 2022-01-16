@@ -136,7 +136,6 @@ main{
     text-align: center;
 }
 
-
 .products-div{
     background-color: oldlace;
     padding: 5px 5px 10px 5px;
@@ -181,6 +180,40 @@ main{
 }
 .more-products .fa-arrow-right{ margin-top: 20px;
     color: #E02C6D;
+}
+
+/* feedback */
+
+.feedbacks{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+}
+.container h3{
+    text-align: center;
+    background-color: oldlace;
+    padding: 5px 5px 10px 5px;
+}
+
+.feedback img{
+    width: 40px;
+    height: 40px;
+}
+
+.feedback p{
+    font-size: 12px;
+}
+
+.feedback{
+    max-width: 250px;
+    min-height: 280px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 5px gray;
 }
 
 /* footer */
