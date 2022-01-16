@@ -29,43 +29,43 @@ main{
         color: red;
     }
     10%{
-        font-size: 48px;
+        font-size: 46px;
         color: indianred;
     }
     20%{
-        font-size: 52px;
+        font-size: 47px;
         color: orange;
     }
     30%{
-        font-size: 55px;
+        font-size: 48px;
         color: yellow;
     }
     40%{
-        font-size: 58px;
+        font-size: 49px;
         color: gold;
     }
     50%{
-        font-size: 60px;
+        font-size: 50px;
         color: goldenrod;
     }
     60%{
-        font-size: 62px;
+        font-size: 51px;
         color: greenyellow;
     }
     70%{
-        font-size: 64px;
+        font-size: 52px;
         color: green;
     }
     80%{
-        font-size: 66px;
+        font-size: 53px;
         color: skyblue;
     }
     90%{
-        font-size: 68px;
+        font-size: 54px;
         color: blue;
     }
     100%{
-        font-size: 70px;
+        font-size: 55px;
         color: blueviolet;
     }
 }
@@ -80,14 +80,13 @@ main{
     height: 414px;
 }
 
-.top-header{
+.container .introduction{
     margin-left: 100px;
 }
 
 .container{
-    background-color: #FFFFFF;
-    margin-bottom: 50px;
-    
+    background-color: #FFFFFF; 
+    margin-bottom: 30px;
 }
 
 .container h1{
@@ -95,9 +94,13 @@ main{
     color: black;   
 }
 
+.container > h3{
+    text-align: center;
+}
+
 /* animation button */
 
-.top-header a{
+.container a{
     text-decoration: none;
 }
 
@@ -109,51 +112,45 @@ main{
     font-size: 16px;
     transition: padding-right 0.3s linear 0.2s,font-size 0.3s linear 0.2s;
 }
+
 .animation-button:hover{
-    padding-right: 150px;
+    padding-right: 200px;
     font-size: 20px;
+    color:black;
+    background-image: repeating-conic-gradient(white 10%, skyblue 20%);
+}
+
+.animation-button:hover .fa-arrow-right{
+    color:black;
 }
 
 .fa-arrow-right{
     color: white;
     margin-left: 5px;
 }
-.container img{
-    width: 440px;
-    height: 414px;
-    margin-left: 40px;
-}
 
 .introduction{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
 }
 
 /* products */
 
-.products-header{
-    text-align: center;
-}
-
-.products-div{
-    background-color: oldlace;
-    padding: 5px 5px 10px 5px;
-}
 .products{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 44px;
     grid-row-gap: 30px;
+    background-color: whitesmoke;
 }
 
 .product{
-    width: 329px;
-    height: 476px;
+    max-width: 329px;
+    min-height: 476px;
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-    padding: 20px 40px 30px 0px;
+    padding: 20px 0px 30px 20px;
     box-shadow: 0px 0px 5px gray;
 }
 
@@ -163,16 +160,10 @@ main{
     border-radius: 5px;
 }
 
-.product-details{
-    margin-left: 40px;
-}
 .fa-star, .fa-star-half-alt{
     color: orange;
 }
 
-.more-products{
-    margin-top: 20px; 
-}
 .more-products a{
     text-decoration: none;
     float: right;
@@ -191,20 +182,14 @@ main{
     grid-template-columns: repeat(3 , 1fr);
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-    background-color: gray;
+    background-color: rgba(135, 207, 235, 0.308);
     padding: 20px 20px 20px 20px;
     border-radius: 10px;
 }
 
-.container h3{
-    text-align: center;
-    background-color: oldlace;
-    padding: 5px 5px 10px 5px;
-}
-
 .feedback img{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .feedback p{
@@ -212,8 +197,8 @@ main{
 }
 
 .feedback{
-    max-width: 250px;
-    min-height: 280px;
+    max-width: 380px;
+    min-height: 300px;
     background-color: white;
     padding: 10px;
     border-radius: 5px;
@@ -225,11 +210,18 @@ main{
 .more-feedbacks a{
     text-decoration: none;
     float: right;
-    color: goldenrod;
+    color: blueviolet;
 }
 
 .more-feedbacks .fa-arrow-right{ 
-    color: goldenrod;
+    color: blueviolet;
+}
+
+.fa-history{
+    color: red;
+    background-color: skyblue;
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
 }
 
 /* footer */
@@ -263,15 +255,18 @@ footer p{
     .container{
         width: 100%;
     }
+    .container .introduction{
+        margin-left: 0px;
+    }
+    .animation-button:hover{
+        padding-right: 80px;
+    }
     .main-name{
         order: 2;
     }
     .main-image{
         order: 1;
         transform: scale(.65) translate(-200px);
-    }
-    .products-div{
-        padding: 5px 110px 10px 5px;
     }
     .products, .introduction, .feedbacks{
         grid-template-columns: repeat(1, 1fr);
@@ -284,15 +279,18 @@ footer p{
 }
 /* tablet devices */
 
-@media only screen and (min-width:688px)and (max-width:992px){
+@media only screen and (min-width:688px)and (max-width:1006px){
     main{
         margin-left: 80px;
     }
     .container{
         width: 100%;
     }
-    .products-div{
-        padding: 5px 20px 10px 5px;
+    .container .introduction{
+        margin-left: 0px;
+    }
+    .animation-button:hover{
+        padding-right: 80px;
     }
     .products,.feedbacks{
         grid-template-columns: repeat(2, 1fr);
